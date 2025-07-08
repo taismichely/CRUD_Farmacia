@@ -1,5 +1,5 @@
 import { IsNotEmpty } from 'class-validator';
-import { Column, Entity, ManyToMany, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
+import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
 import { Categoria } from '../../categoria/entities/categoria.entity';
 
 @Entity({ name: 'tb_produtos' })
@@ -20,7 +20,7 @@ export class Produto {
   preco: number;
 
   @IsNotEmpty()
-  @Column({ length: 'bigint', nullable: false })
+  @Column({ type: 'bigint', nullable: false })
   quantidade: number;
 
   @IsNotEmpty()
